@@ -1,8 +1,8 @@
 //The session start needs to be on the first line of PHP
 <?php
 session_start()  ;
-$dir = '/var/www/students/team6/CS346TeamWebsite/Private/PHP' ;
-$pdir = '/students/team6/CS346TeamWebsite/Public/PHP' ;
+$dir = realpath(__DIR__ . '/../..').'/Private/PHP' ;
+$pdir = dirname(__FILE__) ;
 require_once($dir.'/initialize.php') ;
 global $db ;
 if(!isset($_SESSION['ID']))
